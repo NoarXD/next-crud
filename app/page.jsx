@@ -22,7 +22,6 @@ export default function Home() {
         try {
             const res = await fetch(HTTP + "api/posts", {
                 method: "GET",
-                cache: "no-store",
             });
 
             if (!res.ok) {
@@ -90,7 +89,6 @@ export default function Home() {
                 try {
                     const res = await fetch(`${HTTP}api/posts/${id}`, {
                         method: "GET",
-                        cache: "no-store",
                     });
                     setIsEdit(true);
 
