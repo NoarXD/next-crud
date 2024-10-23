@@ -8,6 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
     const HTTP = "https://millerpost.netlify.app/";
+    // const HTTP = "http://localhost:3000/";
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -37,6 +38,7 @@ export default function Home() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const form = e.target;
 
         if (!title || !content) {
             Swal.fire({
@@ -65,6 +67,7 @@ export default function Home() {
                     title: "Success",
                     text: "Creating post successfully",
                 });
+                form.reset();
                 getPosts();
             } else {
                 throw new Error("Failed to create a post");
