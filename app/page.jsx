@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import Link from "next/link";
 
 export default function Home() {
-    const HTTP = "http://localhost:3000/";
+    const HTTP = "https://millerpost.netlify.app/";
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
